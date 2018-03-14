@@ -23,8 +23,6 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Deployment Instructions
 
-**NOTE:** For security reasons, the AMI for the Bastion instance is not public. If you would like to use it, please email me so I can grant you access.
-
 1. Clone this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
 3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance
