@@ -36,6 +36,8 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 10. Confirm that a runner instance is running in the EC2 Console. You should see 3 VMs similar to these in the EC2 console:
 ![EC2 instances](https://github.com/baypointauto/devops-challenge/blob/master/images/ec2s.png)
 
+If so, deployment is complete!
+
 ## Scalability & Monitoring
 
 - Scaling policies can easily be configured for the ASG to scale GitLab app instances according to demand.
