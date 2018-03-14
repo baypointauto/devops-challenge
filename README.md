@@ -29,7 +29,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 ![EC2 instances](https://github.com/baypointauto/devops-challenge/blob/master/images/ec2s.png)
 4. Access GitLab application at ELB URL and create your admin password
 5. SSH to Bastion server
-6. Follow the instructions here to register the runner with GitLab and name the runner "runner":
+6. Follow the instructions here to register the runner with GitLab. For the description, use "runner".
     https://docs.gitlab.com/runner/register/index.html#gnu-linux
 7. Run this command: `cp /etc/gitlab-runner/config.example /etc/gitlab-runner/config.toml` (replace existing)
 8. Update the GitLab URL, runner token, AWS creds and VPC/subnet IDs in the config file here: `/etc/gitlab-runner/config.toml`
