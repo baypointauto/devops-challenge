@@ -12,12 +12,23 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ### Architecture
 
-_Main Components_
+**Main Components**
 - Terraform
 - Docker
 - AWS
 
-*Features*
+**Features**
 - All infrastructure resources are configured as code (in terraform/)
 - GitLab CI hosts are scaled via Autoscaling Group behind an Elastic Load Balancer (ELB)
-- CI Runners are scaled automatically via Docker
+- CI Runners are scaled automatically by Docker
+- Bastion server which orchestrates CI runners
+
+# Deployment Instructions
+
+NOTE: AMI for bastion for deployment are in my account and private. These instructions cannot be reproduced without those AMIs.
+
+1. Check out this repo and cd to `terraform` directory
+2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
+3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an active instance
+4. Access GitLab CI at DNS endpoint URL
+5. 
