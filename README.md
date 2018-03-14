@@ -27,7 +27,7 @@ First, create two key pairs in the EC2 Console. One called `gitlab` and another 
 
 Then: 
 
-1. On a machine running Terraform and AWS CLI, clone this repo and cd to `terraform` directory
+1. On a machine with Terraform and AWS CLI installed, clone this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
 3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance.
 4. Access GitLab application at ELB URL and create your admin password
