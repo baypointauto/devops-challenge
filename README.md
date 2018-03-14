@@ -34,9 +34,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 8. Update the GitLab URL, runner token, AWS creds and VPC/subnet IDs in the config file here: `/etc/gitlab-runner/config.toml`
 9. Run this command as root: `gitlab-runner run`
 10. Confirm that a runner instance is running in the EC2 Console. You should see 3 VMs similar to these in the EC2 console:
-![EC2 instances](https://github.com/baypointauto/devops-challenge/blob/master/images/ec2s.png)
-
-If so, deployment is complete!
+![EC2 instances](https://github.com/baypointauto/devops-challenge/blob/master/images/ec2s.png) If so, deployment is complete!
 
 ## Scalability & Monitoring
 
