@@ -29,7 +29,7 @@ Then:
 
 1. On a machine with Terraform and AWS CLI installed, clone this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
-3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance (you might have to manually add the first time the ELB spins up).
+3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance (you might have to manually add the instance when the ASG is initially spun up).
 4. Access GitLab application at ELB URL and create your admin password
 5. SSH to Bastion server
 6. Follow the instructions here to register the runner with GitLab. For the description, use "runner".
