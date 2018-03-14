@@ -10,7 +10,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Project Overview
 
-**Architecture**
+**Components**
 - Terraform
 - Docker
 - AWS
@@ -19,7 +19,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 - All infrastructure resources are configured as code (in terraform/)
 - GitLab CI hosts are scaled via Autoscaling Group behind an Elastic Load Balancer (ELB)
 - CI runners are scaled automatically by Docker
-- A Bastion server which orchestrates CI runners
+- A basic Bastion server orchestrates CI runners
 
 ## Deployment Instructions
 
