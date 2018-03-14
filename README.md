@@ -16,3 +16,7 @@ Main Components:
 - Terraform
 - Docker
 - AWS
+
+Features:
+- All infrastructure is configured as code (in terraform/)
+- GitLab CI hosts are autoscaled behind an Elastic Load Balancer (ELB)
