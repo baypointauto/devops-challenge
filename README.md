@@ -21,7 +21,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 - CI Runners are scaled automatically by Docker
 - Bastion server which orchestrates CI runners
 
-# Deployment Instructions
+## Deployment Instructions
 
 **NOTE:** For security reasons, the AMI for the bastion instance is not public. If you would like to use it, please email me and I will grant your account access.
 
