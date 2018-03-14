@@ -23,7 +23,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Deployment Instructions
 
-First, create two key pairs in the EC2 Console. One called `gitlab` and another called `bastion`. Save the public keys.
+First, create two key pairs in the EC2 Console. One called `gitlab` and another called `bastion`. Save the private keys.
 
 Then: 
 
