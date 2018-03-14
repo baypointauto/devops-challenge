@@ -35,7 +35,7 @@ resource "aws_security_group" "bastion_sg" {
 
 # bastion instance (ubuntu)
 resource "aws_instance" "bastion" {
-  ami = "ami-926f7bf2"
+  ami = "ami-9e3024fe"
   instance_type = "t2.micro"
   vpc_security_group_ids = ["${aws_security_group.bastion_sg.id}"]
   subnet_id = "${aws_subnet.gitlab_subnet.id}"
