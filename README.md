@@ -18,7 +18,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 **Features**
 - All infrastructure resources are configured as code (in terraform/)
 - GitLab CI hosts are scaled via Autoscaling Group behind an Elastic Load Balancer (ELB)
-- CI Runners are scaled automatically by Docker
+- CI runners are scaled automatically by Docker
 - A Bastion server which orchestrates CI runners
 
 ## Deployment Instructions
@@ -28,7 +28,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 1. Check out this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
 3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance
-4. Access GitLab application at DNS endpoint URL
+4. Access GitLab application at DNS endpoint URL and create your admin password
 5. SSH to Bastion server
 6. Follow the instructions here: https://docs.gitlab.com/runner/register/index.html#gnu-linux
 7. Run this command: `cp /etc/gitlab-runner/config.example /etc/gitlab-runner/config.toml`
@@ -36,7 +36,10 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 9. Run this command as root: `gitlab-runner run`
 10. Confirm that a runner instance is running in the EC2 Console
 
-### You're done!
+## Scalability
+
+- Scaling policies can easily be configured for the ASG to scale according to demand
+- CI runners will scale as needed to satisfy GitLab's demands. No additional effort required.
 
 ## Possible Security Enhancements
 
