@@ -19,11 +19,11 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 **Features**
 - All infrastructure resources are configured as code (in terraform/)
 - GitLab CI hosts are scaled via an Autoscaling Group and are balanced via an Elastic Load Balancer (ELB)
-- CI runner instances are spun up and down by Docker for super fast build processing
+- CI runner instances are spun up and down by Docker Machine for super fast build processing
 
 ## Deployment Instructions
 
-**NOTE:** For security reasons, the AMI for the Bastion instance is not public. If you would like to use it, please email me so I can grant you account access.
+**NOTE:** For security reasons, the AMI for the Bastion instance is not public. If you would like to use it, please email me so I can grant you access.
 
 1. Clone this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
