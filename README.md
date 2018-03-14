@@ -38,7 +38,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Scalability
 
-- Scaling policies can easily be configured for the ASG to scale GitLab app instances according to demand
+- Scaling policies can easily be configured for the ASG to scale GitLab app instances according to demand.
 - CI runners will scale as needed to satisfy GitLab's demands. No additional effort required.
 
 ## Possible Security Enhancements
