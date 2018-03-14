@@ -36,10 +36,11 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 9. Run this command as root: `gitlab-runner run`
 10. Confirm that a runner instance is running in the EC2 Console
 
-## Scalability
+## Scalability & Monitoring
 
 - Scaling policies can easily be configured for the ASG to scale GitLab app instances according to demand.
 - CI runners will scale as needed to satisfy GitLab's demands. No additional effort required.
+- CloudWatch can be configured to perform monitoring of the ASG.
 
 ## Possible Security Enhancements
 
