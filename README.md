@@ -29,6 +29,8 @@ NOTE: AMI for bastion for deployment are in my account and private. These instru
 
 1. Check out this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
-3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an active instance
-4. Access GitLab CI at DNS endpoint URL
-5. 
+3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance
+4. Access GitLab application at DNS endpoint URL
+5. SSH to Bastion server
+6. Edit the this config file as root: `/etc/gitlab-runner/config.toml`
+7.
