@@ -33,7 +33,7 @@ resource "aws_security_group" "bastion_sg" {
     }
 }
 
-# bastion instance (RHEL)
+# bastion instance (ubuntu)
 resource "aws_instance" "bastion" {
   ami = "ami-926f7bf2"
   instance_type = "t2.micro"
