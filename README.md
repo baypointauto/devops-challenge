@@ -12,7 +12,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ### Architecture
 
-*Main Components*
+_Main Components_
 - Terraform
 - Docker
 - AWS
