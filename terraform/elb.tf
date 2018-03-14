@@ -1,4 +1,4 @@
-# gitlab app server√ ELB
+# gitlab app server ELB
 resource "aws_elb" "gitlab_elb" {
 	name = "gitlab_elb"
 	subnets = ["${aws_subnet.gitlab_subnet.id}"]
