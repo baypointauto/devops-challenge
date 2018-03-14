@@ -31,7 +31,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 5. SSH to Bastion server
 6. Follow the instructions here to register the runner with GitLab:
     https://docs.gitlab.com/runner/register/index.html#gnu-linux
-7. Run this command: `cp /etc/gitlab-runner/config.example /etc/gitlab-runner/config.toml`
+7. Run this command: `cp /etc/gitlab-runner/config.example /etc/gitlab-runner/config.toml` (replace existing)
 8. Update the GitLab URL, runner token, AWS creds and VPC/subnet IDs in the config file here: `/etc/gitlab-runner/config.toml`
 9. Run this command as root: `gitlab-runner run`
 10. Confirm that a runner instance is running in the EC2 Console
