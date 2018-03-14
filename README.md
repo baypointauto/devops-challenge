@@ -35,7 +35,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 8. Run this command as root: `gitlab-runner run`
 9. Confirm that a runner instance is running in the EC2 Console
 
-# Possible Security Enhancements
+## Possible Security Enhancements
 
 - Use an IAM role instead of an account to grant AWS access to the bastion server (to spin up CI runners) so credentials don't have to be stored on the server.
 - Update security group for GitLab instances to only allow inbound traffic from VPC CIDR block. Disallow all outside inbound traffic.
