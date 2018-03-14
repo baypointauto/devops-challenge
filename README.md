@@ -23,7 +23,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 # Deployment Instructions
 
-**NOTE:** For security purposes, the AMI for bastion instance is not public. If you would like to use it, please email me and I will grant your account access.
+**NOTE:** For security reasons, the AMI for the bastion instance is not public. If you would like to use it, please email me and I will grant your account access.
 
 1. Check out this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
@@ -34,3 +34,8 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 7. Update the GitLab and VPC/subnet IDs in the config file
 8. Run this command as root: `gitlab-runner run`
 9. Confirm that a runner instance is running in the EC2 Console
+
+# Possible Security Enhancements
+
+- Use an IAM role instead of an account to grant AWS access to the bastion server (to spin up CI runners) so credentials don't have to be stored on the server.
+- Update security group for GitLab instances to only allow inbound traffic from VPC CIDR block. Disallow all outside inbound traffic.
