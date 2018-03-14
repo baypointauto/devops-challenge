@@ -39,7 +39,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 ## Scalability & Monitoring
 
 - Scaling policies can easily be configured for the ASG to scale GitLab app instances according to demand.
-- CI runner instances will scale as needed to satisfy the build's demands. No additional effort required.
+- CI runner instances will scale as needed to satisfy the build's demands. No additional effort required once configured.
 - CloudWatch can be configured to perform monitoring of the ASG.
 
 ## Possible Security Enhancements
