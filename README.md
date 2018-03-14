@@ -45,4 +45,9 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 ## Possible Security Enhancements
 
 - Use an IAM role instead of an account to grant AWS access to the bastion server (to spin up CI runners) so credentials don't have to be stored on the server.
-- Update security group for GitLab instances to only allow inbound traffic from VPC CIDR block. Disallow all outside inbound traffic.
+- Update security group for GitLab instances to only allow inbound traffic from VPC CIDR block. Disallow all outside inbound traffic. Use bastion server to connect to instances.
+- Put bastion server behind VPN.
+
+## Hardware Testing Solution
+
+I don't know how the hardware is tested currently, but I can imagine it's done using a PC at your facility. Hardware is likely hooked up to the PC via serial cable/USB. The issue then becomes one of allowing GitLab to execute testing code on the on-prem machine. If that's the case, then the testing code that's being executed from the runners can call scripts via SSH commands on the hardware testing machine or the testing server can poll a file in S3 that's updated as part of a deployment. When the file indicates a ready state, the scripts can be downloaded and excuted. Results can be uploaded to S3 or possibly sent to GitLab via an API request to either break or complete the build.
