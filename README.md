@@ -50,6 +50,6 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Hardware Testing Solution
 
-I don't know how the hardware is tested currently, but I can imagine it's done using on-prem device and hardware is likely hooked up to the hardware via cabling or wireless connection. I will assume these machines run Linux. The issue likely then becomes one of allowing GitLab to execute testing code on the on-prem machine and receive some sort of feedback.
+I don't know how the hardware is tested currently, but I can imagine it's done using on-prem devices and hardware is likely hooked up via cabling or wireless connection. I will assume these machines run Linux. The issue likely then becomes one of allowing GitLab to execute testing code on the on-prem machine and receive some sort of feedback.
 
 If that's the case, then the testing code that's being executed from the runners can call scripts via SSH commands on the hardware testing machine or the testing server can poll a file in S3 that's updated as part of a deployment. When the file indicates a ready state, the scripts can be downloaded and excuted. Results can be uploaded to S3 or possibly sent to GitLab via an API request to either break or complete the build.
