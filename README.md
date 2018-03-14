@@ -25,7 +25,8 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 1. Clone this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
-3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance
+3. Once deployment is complete, check newly created ELB in AWS console and confirm it has an InService instance. You should see 3 new VMs similar to these in the EC2 console:
+![EC2 instances](https://github.com/baypointauto/devops-challenge/blob/master/images/ec2s.png)
 4. Access GitLab application at ELB URL and create your admin password
 5. SSH to Bastion server
 6. Follow the instructions here: https://docs.gitlab.com/runner/register/index.html#gnu-linux
