@@ -1,10 +1,10 @@
 # DevOps Challenge
-### Solution by Forrest Jadick
+Solution by Forrest Jadick
 
-## Application Endpoint
+### Application Endpoint
 http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
-## Login Credentials
+### Login Credentials
 Username: adorwart
 Password: hBa=LbsJ5h
 
