@@ -1,4 +1,4 @@
-# gitlab hosts launch config
+# gitlab app launch config
 resource "aws_launch_configuration" "gitlab_lc" {
     name = "gitlab_lc"
     image_id = "ami-67120707"
