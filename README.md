@@ -5,6 +5,6 @@ Solution by Forrest Jadick
 http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ### Login Credentials
-Username: adorwart
-Password: hBa=LbsJ5h
+- Username: adorwart
+- Password: hBa=LbsJ5h
 
