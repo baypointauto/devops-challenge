@@ -44,7 +44,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Possible Security Enhancements
 
-- Use an IAM role instead of an account to grant AWS access to the bastion server (to spin up CI runners) so credentials don't have to be stored on the server.
+- Use an IAM role instead of an account to grant AWS access to the bastion server (to spin up runner instances) so credentials don't have to be stored on the server.
 - Update security group for GitLab instances to only allow inbound traffic from VPC CIDR block. Disallow all outside inbound traffic. Use bastion server to connect to instances.
 - Put bastion server behind VPN.
 
