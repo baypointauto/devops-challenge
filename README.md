@@ -24,7 +24,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Deployment Instructions
 
-**NOTE:** For security reasons, the AMI for the Bastion instance is not public. If you would like to use it, please email me and I will grant your account access.
+**NOTE:** For security reasons, the AMI for the Bastion instance is not public. If you would like to use it, please email me so I can grant you account access.
 
 1. Clone this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
