@@ -10,9 +10,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 ## Project Overview
 
-### Architecture
-
-**Main Components**
+**Architecture**
 - Terraform
 - Docker
 - AWS
@@ -25,7 +23,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 # Deployment Instructions
 
-NOTE: AMI for bastion for deployment are in my account and private. These instructions cannot be reproduced without those AMIs.
+**NOTE:** For security purposes, the AMI for bastion instance is not public. If you would like to use it, please email me and I will grant your account access.
 
 1. Check out this repo and cd to `terraform` directory
 2. Run `terraform init`, then `terraform get && terraform apply -input=false -var-file=gitlab.tfvars`
@@ -33,4 +31,6 @@ NOTE: AMI for bastion for deployment are in my account and private. These instru
 4. Access GitLab application at DNS endpoint URL
 5. SSH to Bastion server
 6. Edit the this config file as root: `/etc/gitlab-runner/config.toml`
-7.
+7. Update the GitLab and VPC/subnet IDs in the config file
+8. Run this command as root: `gitlab-runner run`
+9. Confirm that a runner instance is running in the EC2 Console
