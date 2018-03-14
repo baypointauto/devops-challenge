@@ -18,7 +18,7 @@ http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
 
 **Features**
 - All infrastructure resources are configured as code (in terraform/)
-- GitLab CI hosts are scaled via Autoscaling Group behind an Elastic Load Balancer (ELB)
+- GitLab CI hosts are scaled via an Autoscaling Group and are balanced via an Elastic Load Balancer (ELB)
 - CI runner instances are spun and down by Docker for super fast build processing
 
 ## Deployment Instructions
