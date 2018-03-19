@@ -2,7 +2,7 @@
 Solution by Forrest Jadick
 
 ### Application Endpoint
-http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/
+http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/ (offline)
 
 ### Login Credentials
 - Username: adorwart
@@ -48,6 +48,7 @@ Then:
 
 ## Possible Security Enhancements
 
+- Enable port 443 on the ELB security group, add 443 to as a listener to the ELB and assign a certificate. Only allow traffic over port 443 to secure the connection to the GitLab app.
 - Use an IAM role instead of an account to grant AWS access to the Bastion server (to spin up runner instances) so credentials don't have to be stored on the server.
 - Update security group for GitLab instances to only allow inbound traffic from within the VPC. Disallow all other inbound traffic, including SSH. Use Bastion server to SSH to instances.
 - Put Bastion server behind VPN.
