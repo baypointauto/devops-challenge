@@ -1,4 +1,4 @@
-# DevOps Challenge
+# Shield AI DevOps Challenge
 Solution by Forrest Jadick
 
 ### Application Endpoint
