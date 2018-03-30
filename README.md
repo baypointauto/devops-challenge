@@ -52,9 +52,3 @@ Then:
 - Use an IAM role instead of an account to grant AWS access to the Bastion server (to spin up runner instances) so credentials don't have to be stored on the server.
 - Update security group for GitLab instances to only allow inbound traffic from within the VPC. Disallow all other inbound traffic, including SSH. Use Bastion server to SSH to instances.
 - Put Bastion server behind VPN.
-
-## Hardware Testing Solution
-
-I don't know how the hardware is tested currently, but I can imagine it's done using on-prem devices. Hardware is likely hooked up via cabling or wireless connection. I will assume these machines run Linux. The issue likely then becomes one of allowing GitLab to execute testing code on the on-prem machine (Hybrid Cloud). GitLab must then receive feedback from the testing array based on the results.
-
-If that's the case, then the testing code that's being executed from the runners can call scripts via SSH commands on the hardware testing machine or the testing server can poll a trigger file in S3 that's updated as part of a deployment (safer). When the file indicates a ready state, the scripts that need to be tested can be downloaded and excuted. Results can be uploaded to S3 or possibly sent to GitLab via an API request to either break or complete the build.
