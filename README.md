@@ -1,5 +1,4 @@
 # Shield AI DevOps Challenge
-Solution by Forrest Jadick
 
 ### Application Endpoint
 http://gitlab-elb-1078190902.us-west-1.elb.amazonaws.com/ (offline)
